@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTX-2 Video Gallery</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0a1628 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 40px 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle { text-align: center; color: #888; margin-bottom: 50px; }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+        .video-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.4s ease;
+        }
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0,212,255,0.15);
+            border-color: rgba(0,212,255,0.3);
+        }
+        .video-card.featured {
+            grid-column: 1 / -1;
+            max-width: 1000px;
+            margin: 0 auto 20px;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-top: 56.25%;
+            background: #000;
+        }
+        .video-wrapper video {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: contain;
+        }
+        .video-info { padding: 20px; }
+        .video-info h3 { font-size: 1.2rem; margin-bottom: 10px; }
+        .video-info p { color: #777; font-size: 0.9rem; line-height: 1.6; }
+        .badge {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 25px;
+            font-size: 0.75rem;
+            margin-top: 12px;
+            font-weight: 600;
+        }
+        .badge.gold { background: linear-gradient(90deg, #ffd700, #ff8c00); color: #000; }
+        .badge.blue { background: linear-gradient(90deg, #00d4ff, #0088ff); color: #000; }
+        .badge.purple { background: linear-gradient(90deg, #7b2cbf, #c850c0); }
+        .stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            color: #555;
+            font-size: 0.85rem;
+        }
+        .new-badge {
+            position: absolute;
+            top: 15px; right: 15px;
+            background: #ff4757;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LTX-2 TURBO Gallery</h1>
+        <p class="subtitle">AI-Generated Videos | NVIDIA GB10 | 120GB Unified Memory</p>
+
+        <div class="video-grid">
+            <!-- FEATURED: GX10 Stromfee.AI Video Academy Ad -->
+            <div class="video-card featured">
+                <div class="video-wrapper">
+                    <span class="new-badge">REMOTION!</span>
+                    <video controls autoplay loop muted playsinline>
+                        <source src="stromfee_academy_ad.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>GX10 Stromfee.AI Video Academy</h3>
+                    <p>Professionelle Werbung mit animierten Overlays: Cyberpunk Neon-Glow Effekte, Glitch Text Animation, Animierte Grid Overlays, Typewriter Text, Spring-animierte Badges, Feature Items mit Slide-In. Erstellt mit Remotion + React.</p>
+                    <span class="badge gold">REMOTION ANIMATED</span>
+                    <span class="badge purple" style="margin-left: 8px;">22 SEKUNDEN</span>
+                    <div class="stats">
+                        <span>1920x1080</span>
+                        <span>528 frames</span>
+                        <span>24 fps</span>
+                        <span>18.2 MB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FEATURED: 1 Minute Jungle Documentary -->
+            <div class="video-card featured">
+                <div class="video-wrapper">
+                    <span class="new-badge">1 MINUTE!</span>
+                    <video controls autoplay loop muted playsinline>
+                        <source src="jungle_1min_fullhd.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>URWALD - Journey Through the Rainforest (Full)</h3>
+                    <p>15 AI-generierte Szenen: Regenwald-Kronendach, Jaguar, Wasserfall, Tempelruinen, tropischer Fluss, Pfeilgiftfrösche, Brüllaffen, Urwaldriese, Orchideen, Anakonda, Tukan, Nacht-Dschungel, Stromschnellen, Faultier, Aerial-Finale</p>
+                    <span class="badge gold">FULL HD 1920x1080</span>
+                    <div class="stats">
+                        <span>1920x1080</span>
+                        <span>1 Minute</span>
+                        <span>24 fps</span>
+                        <span>58 MB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Whale Video -->
+            <div class="video-card featured">
+                <div class="video-wrapper">
+                    <video controls loop muted playsinline>
+                        <source src="ltx2_whale_fullhd.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>Humpback Whale - Underwater Paradise</h3>
+                    <p>Breathtaking underwater scene in crystal clear tropical ocean, a majestic humpback whale slowly gliding through sunbeams, bioluminescent jellyfish, coral reef with colorful tropical fish, volumetric god rays, National Geographic documentary style</p>
+                    <span class="badge gold">FULL HD 1920x1080</span>
+                    <div class="stats">
+                        <span>1920x1080</span>
+                        <span>97 frames</span>
+                        <span>24 fps</span>
+                        <span>4.0 sec</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eagle Video -->
+            <div class="video-card featured">
+                <div class="video-wrapper">
+                    <video controls loop muted playsinline>
+                        <source src="ltx2_fullhd_eagle.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>Majestic Eagle - Mountain Sunset</h3>
+                    <p>A majestic golden eagle soaring gracefully through crisp mountain air, snowcapped peaks below, dramatic sunset lighting with warm orange and purple hues, photorealistic, cinematic quality</p>
+                    <span class="badge gold">FULL HD 1920x1080</span>
+                    <div class="stats">
+                        <span>1920x1080</span>
+                        <span>97 frames</span>
+                        <span>24 fps</span>
+                        <span>4.0 sec</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Native HD Videos -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video controls loop muted playsinline>
+                        <source src="ltx2_whale_4sec.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>Whale (Native 1024x576)</h3>
+                    <p>Native pipeline output before upscaling</p>
+                    <span class="badge blue">Native + Spatial Upscaler</span>
+                    <div class="stats">
+                        <span>1024x576</span>
+                        <span>97 frames</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video controls loop muted playsinline>
+                        <source src="ltx2_hq_eagle.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>Eagle (Native 1024x576)</h3>
+                    <p>Native pipeline output before upscaling</p>
+                    <span class="badge blue">Native + Spatial Upscaler</span>
+                    <div class="stats">
+                        <span>1024x576</span>
+                        <span>97 frames</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video controls loop muted playsinline>
+                        <source src="ltx2_test.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>First Test (768x512)</h3>
+                    <p>Original fast distilled test generation</p>
+                    <span class="badge purple">LTX-2 Distilled FP8</span>
+                    <div class="stats">
+                        <span>768x512</span>
+                        <span>57 frames</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
